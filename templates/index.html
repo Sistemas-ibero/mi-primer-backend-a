@@ -12,24 +12,41 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('about') }}">About</a>
-              </li>
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('about') }}">About</a>
+                    </li>
 
-          </div>
+            </div>
         </div>
-      </nav>
+    </nav>
     <div class="container">
         <h1>Mi primer backend =D</h1>
+
+        <div class="row">
+            <form action="{{ url_for('success') }}" method="POST">
+                <div class="mb-3">
+                    <label for="email" class="form-label">Ingresa tu correo:</label>
+                    <input type="email" name="email" id="email">
+
+                    <label for="password" class="form-label">Ingresa tu contraseña:</label>
+                    <input type="password" name="password" id="password">
+
+                    <button type="submit" class="btn btn-primary">Ingresar</button>
+
+                </div>
+            </form>
+        </div>
     </div>
 
 
